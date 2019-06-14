@@ -11,6 +11,21 @@ import org.apache.log4j.Logger;
 import DAO.DadosDAO;
 import DAO.FighterDAO;
 import main.main;
+
+/**
+	* Dados Classe responsável pela leitura do arquivo e armazenar os dados nas tabelas corretas do banco de dados
+	* 
+	* @param fDAO Cria um objeto do tipo FighterDAO que é utilizado para armazenar os dados do lutador na tabela fighter do banco de dados
+	* @param dao Cria um objeto do tipo DadosDAO para inserir todos os dados de ambos os lutadores na tabela lutas
+	* @param fit Cria um objeto do tipo Fighter para armazenar os dados do lutador 1 que serão inseridos na tabela fighter por outro método
+	* @param fit2 Cria um objeto do tipo Fighter para armazenar os dados do lutador 2 que serão inseridos na tabela fighter por outro método
+	* @param fs Cria um objeito do tipo FightScope para armazenar os movimentos do lutador 1
+	* @param fs2 Cria um objeito do tipo FightScope para armazenar os movimentos do lutador 2
+	* @param fitrray ArrayList para armazenar cada linha de movimentos de luta do lutador 1
+	* @param fit2array ArrayList para armazenar cada linha de movimentos de luta do lutador 2
+	* @param parts[] Usado para armazenas as strings referente aos dados do jogador que serão inseridos na tabela fighter
+	* @param parts1[] Usado para armazenas as strings referente aos dados da luta que serão inseridos na tabela lutas
+	*/
  
 public class Dados {
 		
@@ -39,9 +54,9 @@ public class Dados {
       String linha = lerArq.readLine(); 
       logger.info("Le as linhas do arquivo");
       
-      // l� a primeira linha
-// a vari�vel "linha" recebe o valor "null" quando o processo
-// de repeti��o atingir o final do arquivo texto
+      // le a primeira linha
+// a variavel "linha" recebe o valor "null" quando o processo
+// de repeticao atingir o final do arquivo texto
       String parts[] = linha.split(";");
       
       if(cont==0) { //armazenar os 2 lutadores
@@ -88,9 +103,9 @@ public class Dados {
     	  String linha1 = lerArq.readLine(); 
     	  logger.info("Le as linha do arquivo");
     	  
-    	  // l� a primeira linha
-    	// a vari�vel "linha" recebe o valor "null" quando o processo
-    	// de repeti��o atingir o final do arquivo texto
+    	  // le a primeira linha
+    	// a variavel "linha" recebe o valor "null" quando o processo
+    	// de repeticao atingir o final do arquivo texto
     	  String parts1[] = linha1.split(";");
 
     	      fs.setIdluta(parts1[2]);

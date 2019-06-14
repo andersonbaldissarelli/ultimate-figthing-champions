@@ -1,5 +1,10 @@
 package util;
 
+	/**
+	 * Classe FightScope
+	 * Usada para armazenar os atributos das lutas de um dos lutadores
+	 */
+
 public class FightScope {
 	String idluta;
 	String lutador;

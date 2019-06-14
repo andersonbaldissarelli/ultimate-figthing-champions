@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import org.apache.log4j.Logger;
 
 import main.main;
+import util.BancoLuta;
 import util.FightScope;
 import util.Fighter;
-import util.teste;
 
 
 
@@ -46,8 +46,8 @@ public class DadosDAO {
 	}
 	
 	
-	public teste selecionar2(teste fs2){
-			teste Fighter=new teste();
+	public BancoLuta selecionar2(BancoLuta fs2){
+			BancoLuta Fighter=new BancoLuta();
 			try{
 				Connection conexao = new Conexao().getConexao();
 				ResultSet result = conexao.prepareStatement("select * from lutas where lutador1="+fs2.getLutador() ).executeQuery();
@@ -75,6 +75,7 @@ public class DadosDAO {
 				conexao.close();
 				}catch( SQLException e){
 					e.printStackTrace();
+					logger.warn("Erro SQL Exception");
 				}
 				
 			return Fighter;

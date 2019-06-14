@@ -2,8 +2,12 @@ package util;
 
 public class Fighter {
 
-
+	 /**
+	 * Classe Fighter
+	 * Usada para armazenar dados dos lutadores
+	 */
 		//classe POJO
+
 			private String Nome;
 			private String categoria;
 			private String pais;
@@ -34,8 +38,5 @@ public class Fighter {
 			public void setCategoria(String categoria) {
 				this.categoria = categoria;
 			}
-			
-			
-		
-
+				
 }

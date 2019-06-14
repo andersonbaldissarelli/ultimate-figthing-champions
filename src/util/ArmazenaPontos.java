@@ -3,6 +3,10 @@ package util;
 //usada preencher tabela vencedor
 public class ArmazenaPontos {
 	
+	/**
+	 * Classe ArmazenaPontos
+	 * Usada para armazenar dados do lutador vencedor e perdedor da luta
+	 */
 	String idluta;
 	String vencedor;
 	int Pontos;
@@ -51,6 +55,15 @@ public class ArmazenaPontos {
 	
 	public ArmazenaPontos Winner(String nome, int pontos1, String nome2, int pontos2) {
 	
+		/**
+	* 
+	* @param Winner Método que analisa os pontos de ambos os lutadores e retorna um objeto do tipo Armazena pontos contendo os dados do vencedor e perdedor da luta
+	* @param nome armazena o nome do lutador 1
+	* @param pontos1 armazena os pontos do lutador 1
+	* @param nome2 armazena o nome do lutador 2
+	* @param pontos2 armazena os pontos do lutador 2
+	* @return Retorna um objeto do tipo Armazena pontos contendo os dados do vencedor e perdedor da luta
+	*/
 		if(pontos1>pontos2) {
 			ArmazenaPontos ap = new ArmazenaPontos();
 			ap.setVencedor(nome);
@@ -68,4 +81,5 @@ public class ArmazenaPontos {
 			return ap;
 		}
 	}
+	
 }
